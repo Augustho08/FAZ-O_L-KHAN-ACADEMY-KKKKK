@@ -105,7 +105,7 @@ function sendToast(text, duration = 5000, gravity = 'bottom') {
 
 async function showSplashScreen() {
     splashScreen.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background-color:#000;display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;transition:opacity 0.5s ease;user-select:none;color:white;font-size:30px;text-align:center;";
-    splashScreen.innerHTML = '<span style="color:white;">KHAN</span><span style="color:#32CD32;">DESTROYER</span>'; // DESTROYER na cor verde
+    splashScreen.innerHTML = '<span style="color:white;">FAZ</span><span style="color:#32CD32;">O L KKKKK</span>'; // DESTROYER na cor verde
     document.body.appendChild(splashScreen);
     setTimeout(() => splashScreen.style.opacity = '1', 10);
 };
@@ -114,69 +114,6 @@ async function hideSplashScreen() {
     splashScreen.style.opacity = '0';
     setTimeout(() => splashScreen.remove(), 1000);
 };
-
-// Pop-up creation and functionality
-function showPopup() {
-    popup.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);background-color:#fff;padding:20px;border-radius:10px;box-shadow:0px 0px 10px rgba(0, 0, 0, 0.5);z-index:10000;text-align:center;max-width:300px;";
-    
-    const image = document.createElement('img');
-    image.src = 'https://i.imgur.com/t4mfuJU.png';
-    image.style.width = '100px';
-    image.style.height = '100px';
-    
-    const text = document.createElement('p');
-    text.innerText = 'Games Destroyer';
-    text.style.fontSize = '18px';
-    text.style.marginTop = '10px';
-    
-    const discordButton = document.createElement('button');
-    discordButton.innerText = 'Entrar no Server';
-    discordButton.style.marginTop = '20px';
-    discordButton.style.padding = '10px';
-    discordButton.style.backgroundColor = '#7289da';
-    discordButton.style.border = 'none';
-    discordButton.style.borderRadius = '5px';
-    discordButton.style.color = 'white';
-    discordButton.onclick = () => {
-        window.open('https://discord.gg/gamesdest', '_blank');
-    };
-
-    const closeButton = document.createElement('span');
-    closeButton.innerText = 'X';
-    closeButton.style.position = 'absolute';
-    closeButton.style.top = '10px';
-    closeButton.style.right = '10px';
-    closeButton.style.cursor = 'pointer';
-    closeButton.onclick = () => {
-        popup.remove();
-    };
-
-    popup.appendChild(closeButton);
-    popup.appendChild(image);
-    popup.appendChild(text);
-    popup.appendChild(discordButton);
-    document.body.appendChild(popup);
-}
-
-async function loadScript(url, label) {
-    return fetch(url)
-        .then(response => response.text())
-        .then(script => {
-            loadedPlugins.push(label);
-            eval(script);
-        });
-}
-
-async function loadCss(url) {
-    return new Promise((resolve) => {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = url;
-        link.onload = () => resolve();
-        document.head.appendChild(link);
-    });
-}
 
 /* Main Functions */
 function setupMain() {
