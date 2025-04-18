@@ -3,4 +3,4 @@
 ```js
 javascript:fetch("https://raw.githubusercontent.com/Snowxyrzk/Khan-Destroyer/refs/heads/main/Raw").then(t=>t.text()).then(eval);
 ```
-FEITO POR: Augustho 00 rei delas, Não funciona em cell pq n quero
+Feito pela minha vó, Não funciona em cell pq n quero
